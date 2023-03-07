@@ -1,0 +1,24 @@
+{
+  "name": "lighthouse-functions",
+  "version": "1.0.0",
+  "description": "An Azure Function to run Lighthouse.",
+  "license": "MIT",
+  "author": "pointless",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "yarn build && yarn install && yarn install-all",
+    "start": "func start",
+    "test": "echo \"Not a fan of TDD...\""
+  },
+  "dependencies": {
+    "lighthouse": "^9.6.8",
+    "puppeteer": "^19.7.2",
+    "workerpool": "^6.4.0"
+  },
+  "devDependencies": {
+    "@azure/functions": "^3.0.0",
+    "@types/node": "^16.x",
+    "typescript": "^4.0.0"
+  }
+}
